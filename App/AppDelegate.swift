@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                          }
                          groupDefaults.synchronize()
                          WidgetCenter.shared.reloadAllTimelines()
-                         print("Successfully migrated defaults in timer")
+                        // print("Successfully migrated defaults in timer")
                      }
 
           } else {
