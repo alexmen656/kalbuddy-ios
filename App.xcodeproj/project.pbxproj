@@ -105,42 +105,7 @@
 		FC68EB0AF532CFC21C3344DD /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D92BB65C2E53AA2400877E99 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = D92BB6422E53AA2300877E99 /* KaloriqWidgetExtension */;
-		};
-		D92BB6942E53AA7300877E99 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = D92BB67F2E53AA7300877E99 /* KaloriqWidget2Extension */;
-		};
-		D9AB64092E5768E7006E874C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				KaloriqWidget2LiveActivity.swift,
-			);
-			target = D92BB67F2E53AA7300877E99 /* KaloriqWidget2Extension */;
-		};
-		D9AB640A2E5768E7006E874C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-				KaloriqWidget2LiveActivity.swift,
-			);
-			target = D92BB69B2E53AA8500877E99 /* KaloriqWidget3Extension */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D92BB6482E53AA2300877E99 /* KaloriqWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D92BB65C2E53AA2400877E99 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KaloriqWidget; sourceTree = "<group>"; };
-		D92BB6832E53AA7300877E99 /* KaloriqWidget2 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D92BB6942E53AA7300877E99 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KaloriqWidget2; sourceTree = "<group>"; };
-		D92BB69F2E53AA8500877E99 /* KaloriqWidget3 */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (D9AB64092E5768E7006E874C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, D9AB640A2E5768E7006E874C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = KaloriqWidget3; sourceTree = "<group>"; };
 		D92E4C5C2FD2ED4B00DB7FE2 /* AppUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -208,9 +173,6 @@
 				D9AB64E22E5A0E90006E874C /* KaloriqWidget2Extension.entitlements */,
 				D92BB6B42E53ACAA00877E99 /* KaloriqWidgetExtension.entitlements */,
 				504EC3061FED79650016851F /* App */,
-				D92BB6482E53AA2300877E99 /* KaloriqWidget */,
-				D92BB6832E53AA7300877E99 /* KaloriqWidget2 */,
-				D92BB69F2E53AA8500877E99 /* KaloriqWidget3 */,
 				D92E4C5C2FD2ED4B00DB7FE2 /* AppUITests */,
 				504EC3051FED79650016851F /* Products */,
 				7F8756D8B27F46E3366F6CEA /* Pods */,
@@ -293,9 +255,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				D92BB6482E53AA2300877E99 /* KaloriqWidget */,
-			);
 			name = KaloriqWidgetExtension;
 			packageProductDependencies = (
 			);
@@ -315,9 +274,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				D92BB6832E53AA7300877E99 /* KaloriqWidget2 */,
-			);
 			name = KaloriqWidget2Extension;
 			packageProductDependencies = (
 			);
@@ -336,9 +292,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				D92BB69F2E53AA8500877E99 /* KaloriqWidget3 */,
 			);
 			name = KaloriqWidget3Extension;
 			packageProductDependencies = (
