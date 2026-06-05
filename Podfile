@@ -22,8 +22,8 @@ def capacitor_pods
   pod 'CapacitorStatusBar', :path => '../../node_modules/@capacitor/status-bar'
   pod 'CapawesomeCapacitorTorch', :path => '../../node_modules/@capawesome/capacitor-torch'
   pod 'RevenuecatPurchasesCapacitor', :path => '../../node_modules/@revenuecat/purchases-capacitor'
-  pod 'KaloriqBarcodeScanner', :path => '../../kaloriq-barcode-scanner'
-  pod 'KaloriqHealthKit', :path => '../../kaloriq-health-kit'
+  pod 'KalbuddyBarcodeScanner', :path => '../../node_modules/kalbuddy-barcode-scanner'
+  pod 'KalbuddyHealthKit', :path => '../../node_modules/kalbuddy-health-kit'
 end
 
 target 'App' do
