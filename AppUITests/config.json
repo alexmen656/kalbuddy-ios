@@ -1,0 +1,18 @@
+{
+  "_config": {
+    "scheme": "App",
+    "devices": [
+      "iPhone 16 Pro Max",
+      "iPad Pro (12.9-inch) (4th generation)"
+    ],
+    "languages": ["en-US", "de-DE", "es-ES"],
+    "bgColor1": "#007052",
+    "bgColor2": "#00A878",
+    "textColor": "#FFFFFF"
+  },
+  "testScreenshot00_home": "Track every meal with a single snap.",
+  "testScreenshot01_analytics": "See your trends and reach your goals.",
+  "testScreenshot02_streak": "Build a healthy habit, day by day.",
+  "testScreenshot03_foodDatabase": "Thousands of foods at your fingertips.",
+  "testScreenshot04_upgrade": "Go unlimited with KalBuddy Premium."
+}
