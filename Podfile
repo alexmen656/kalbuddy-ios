@@ -29,16 +29,3 @@ target 'App' do
   capacitor_pods
   # Add your Pods here
 end
-
-post_install do |installer|
-  assertDeploymentTarget(installer)
-
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      # Build for all architectures
-      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
-      # Exclude arm64 architecture for the iOS simulator
-      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
-    end
-  end
-end
