@@ -2,40 +2,63 @@
 //  AppUITests.swift
 //  AppUITests
 //
-//  Created by Alex Polan on 6/5/26.
+//  KalBuddy screenshot pipeline - see config.json for device/language config.
+//  Demo data is seeded via CapacitorStorage.ui_test_mode.
 //
 
 import XCTest
 
+@MainActor
 final class AppUITests: XCTestCase {
 
+    var app: XCUIApplication!
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        setupScreenshots(app)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app = nil
     }
 
-    @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+    private func launch(route: String, settle: TimeInterval = 3.0) {
+        app.launchArguments += [
+            "-CapacitorStorage.ui_test_mode", "1",
+            "-CapacitorStorage.ui_test_start_route", route,
+        ]
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertTrue(
+            app.webViews.firstMatch.waitForExistence(timeout: 30),
+            "Capacitor web view never appeared"
+        )
+        Thread.sleep(forTimeInterval: settle)
     }
 
-    @MainActor
-    func testLaunchPerformance() throws {
-        // This measures how long it takes to launch your application.
-        measure(metrics: [XCTApplicationLaunchMetric()]) {
-            XCUIApplication().launch()
-        }
+    func testScreenshot00_home() throws {
+        launch(route: "/")
+        takeScreenshot("testScreenshot00_home")
+    }
+
+    func testScreenshot01_analytics() throws {
+        launch(route: "/analytics", settle: 4.0)
+        takeScreenshot("testScreenshot01_analytics")
+    }
+
+    func testScreenshot02_streak() throws {
+        launch(route: "/streak")
+        takeScreenshot("testScreenshot02_streak")
+    }
+
+    func testScreenshot03_foodDatabase() throws {
+        launch(route: "/food-database", settle: 4.0)
+        takeScreenshot("testScreenshot03_foodDatabase")
+    }
+
+    func testScreenshot04_upgrade() throws {
+        launch(route: "/upgrade", settle: 6.0)
+        takeScreenshot("testScreenshot04_upgrade")
     }
 }
